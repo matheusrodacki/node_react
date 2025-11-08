@@ -6,6 +6,13 @@ import tseslint from 'typescript-eslint'
 import { defineConfig, globalIgnores } from 'eslint/config'
 
 export default defineConfig([
+  {
+    languageOptions: {
+      parserOptions: {
+        tsconfigRootDir: import.meta.dirname,
+      },
+    },
+  },
   globalIgnores(['dist']),
   {
     files: ['**/*.{ts,tsx}'],
@@ -18,6 +25,9 @@ export default defineConfig([
     languageOptions: {
       ecmaVersion: 2020,
       globals: globals.browser,
+      parserOptions: {
+        tsconfigRootDir: import.meta.dirname,
+      },
     },
   },
 ])

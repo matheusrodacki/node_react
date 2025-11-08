@@ -6,10 +6,22 @@ import eslintConfigPrettier from "eslint-config-prettier/flat";
 
 export default defineConfig([
   {
+    languageOptions: {
+      parserOptions: {
+        tsconfigRootDir: import.meta.dirname,
+      },
+    },
+  },
+  {
     files: ["**/*.{js,mjs,cjs,ts,mts,cts}"],
     plugins: { js },
     extends: ["js/recommended", "prettier"],
-    languageOptions: { globals: globals.browser },
+    languageOptions: {
+      globals: globals.browser,
+      parserOptions: {
+        tsconfigRootDir: import.meta.dirname,
+      },
+    },
   },
   tseslint.configs.recommended,
   eslintConfigPrettier,
