@@ -6,8 +6,7 @@ export const webhooks = pgTable("webhooks", {
   id: text()
     .primaryKey()
     .$defaultFn(() => uuidv7()),
-
-  methods: text().notNull(),
+  method: text().notNull(),
   pathname: text().notNull(),
   ip: text().notNull(),
   statusCode: integer().notNull().default(200),

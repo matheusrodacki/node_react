@@ -8,6 +8,13 @@
       "when": 1762624423751,
       "tag": "0000_fixed_magma",
       "breakpoints": true
+    },
+    {
+      "idx": 1,
+      "version": "7",
+      "when": 1762691228257,
+      "tag": "0001_giant_iron_monger",
+      "breakpoints": true
     }
   ]
 }
